@@ -1,9 +1,9 @@
 {
-	"ImportPath": "DataCenter",
-	"GoVersion": "go1.7",
+	"ImportPath": ".",
+	"GoVersion": "go1.10",
 	"GodepVersion": "v80",
 	"Packages": [
-		"./..."
+		"./"
 	],
 	"Deps": [
 		{
