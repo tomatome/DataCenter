@@ -1,0 +1,44 @@
+{
+	"ImportPath": ".",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v79",
+	"Packages": [
+		"."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/websocket",
+			"Comment": "v1.2.0-39-gcd94665",
+			"Rev": "cd94665a654c1ec903896f2902573b46dd21baa7"
+		},
+		{
+			"ImportPath": "github.com/nkovacs/go-engine.io",
+			"Rev": "0322b59816cbe303aa34f137c1bf105093ba3f63"
+		},
+		{
+			"ImportPath": "github.com/nkovacs/go-engine.io/message",
+			"Rev": "0322b59816cbe303aa34f137c1bf105093ba3f63"
+		},
+		{
+			"ImportPath": "github.com/nkovacs/go-engine.io/parser",
+			"Rev": "0322b59816cbe303aa34f137c1bf105093ba3f63"
+		},
+		{
+			"ImportPath": "github.com/nkovacs/go-engine.io/polling",
+			"Rev": "0322b59816cbe303aa34f137c1bf105093ba3f63"
+		},
+		{
+			"ImportPath": "github.com/nkovacs/go-engine.io/transport",
+			"Rev": "0322b59816cbe303aa34f137c1bf105093ba3f63"
+		},
+		{
+			"ImportPath": "github.com/nkovacs/go-engine.io/websocket",
+			"Rev": "0322b59816cbe303aa34f137c1bf105093ba3f63"
+		},
+		{
+			"ImportPath": "github.com/nkovacs/go-socket.io",
+			"Comment": "0.9.x-55-ge507d8c",
+			"Rev": "e507d8cf976e5c3b5b20d96a630f1ddf63d76508"
+		}
+	]
+}
