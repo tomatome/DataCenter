@@ -1,9 +1,9 @@
 {
-	"ImportPath": ".",
+	"ImportPath": "./vendor",
 	"GoVersion": "go1.10",
 	"GodepVersion": "v80",
 	"Packages": [
-		"vendor"
+		"./"
 	],
 	"Deps": [
 		{
