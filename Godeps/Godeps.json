@@ -1,5 +1,5 @@
 {
-	"ImportPath": "./vendor/",
+	"ImportPath": "./",
 	"GoVersion": "go1.10",
 	"GodepVersion": "v79",
 	"Packages": [
