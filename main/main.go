@@ -89,6 +89,7 @@ func main() {
 	server := server()
 	s, _ := exec.LookPath(os.Args[0])
 	log.Println("cwd:", s)
+	log.Println(os.Environ())
 	http.Handle("/socket.io/", server)
 	http.Handle("/", http.FileServer(http.Dir("../pages/")))
 	port := os.Getenv("PORT")
