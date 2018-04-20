@@ -86,7 +86,7 @@ func server() *socketio.Server {
 func main() {
 	server := server()
 	http.Handle("/socket.io/", server)
-	http.Handle("/", http.FileServer(http.Dir("./")))
+	http.Handle("/", http.FileServer(http.Dir("./pages")))
 	log.Println("Serving at localhost:12345...")
 	log.Fatal(http.ListenAndServe(":12345", nil))
 }
