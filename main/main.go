@@ -91,9 +91,8 @@ func main() {
 	log.Println("cwd:", s)
 	log.Println(os.Environ())
 	http.Handle("/socket.io/", server)
-	http.Handle("/", http.FileServer(http.Dir("../pages/")))
+	http.Handle("/", http.FileServer(http.Dir("./pages/")))
 	port := os.Getenv("PORT")
-	host := os.Getenv("HOST")
-	log.Println("Serving at ", host+":", port)
-	log.Fatal(http.ListenAndServe(host+":"+port, nil))
+	log.Println("Serving at localhost:", port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
