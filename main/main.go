@@ -5,8 +5,6 @@ import (
 	"log"
 	"net/http"
 	"strconv"
-
-	"github.com/nkovacs/go-socket.io"
 )
 
 type Room struct {
@@ -86,7 +84,7 @@ func server() *socketio.Server {
 func main() {
 	server := server()
 	http.Handle("/socket.io/", server)
-	http.Handle("/", http.FileServer(http.Dir("./pages")))
+	http.Handle("/", http.FileServer(http.Dir("../pages")))
 	log.Println("Serving at localhost:12345...")
 	log.Fatal(http.ListenAndServe(":12345", nil))
 }
