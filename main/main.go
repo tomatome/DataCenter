@@ -19,8 +19,7 @@ type Room struct {
 func initRoom(name, openid string) *Room {
 	c := &Room{}
 	c.room = name
-	c.member = make([]string, 1, 2)
-	c.member[0] = openid
+	c.member = 0
 	return c
 }
 
