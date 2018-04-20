@@ -1,1 +1,1 @@
-web: DataCenter
+web: main
