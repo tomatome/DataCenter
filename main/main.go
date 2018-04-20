@@ -86,8 +86,9 @@ func server() *socketio.Server {
 
 func main() {
 	server := server()
+	log.Println("cwd:", os.Args[0])
 	http.Handle("/socket.io/", server)
-	http.Handle("/", http.FileServer(http.Dir("../pages")))
+	http.Handle("/", http.FileServer(http.Dir("../pages/")))
 	port := os.Getenv("PORT")
 	log.Println("Serving at localhost:", port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))
