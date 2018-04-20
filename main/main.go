@@ -5,6 +5,8 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+
+	"github.com/nkovacs/go-socket.io"
 )
 
 type Room struct {
