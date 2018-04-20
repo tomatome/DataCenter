@@ -13,7 +13,7 @@ import (
 
 type Room struct {
 	room   string
-	member []string
+	member int
 }
 
 func initRoom(name, openid string) *Room {
@@ -50,8 +50,8 @@ func server() *socketio.Server {
 		} else {
 			hasFound := false
 			for _, c := range cRoom {
-				if len(c.member) == 1 {
-					c.member = append(c.member, addr)
+				if c.member == 1 {
+					c.member++
 					so.Join(c.room)
 					hasFound = true
 					room = c.room
@@ -77,7 +77,12 @@ func server() *socketio.Server {
 		so.On("disconnection", func() {
 			log.Println(addr + " on disconnect")
 			so.BroadcastTo(room, "chat message", addr+" leaving")
-			delete(cRoom, room)
+			mRoom := cRoom[room]
+			mRoom.member--
+			if mRoom.member == 0 {
+				delete(cRoom, room)
+			}
+
 		})
 	})
 	server.On("error", func(so socketio.Socket, err error) {
