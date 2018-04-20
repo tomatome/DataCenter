@@ -56,6 +56,7 @@ func server() *socketio.Server {
 					hasFound = true
 					room = c.room
 					log.Println("join in room: ", c.room)
+					so.BroadcastTo(room, "chat message", addr+" join in room")
 					break
 				}
 			}
