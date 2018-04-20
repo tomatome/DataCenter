@@ -87,7 +87,7 @@ func server() *socketio.Server {
 
 func main() {
 	server := server()
-	s, err := exec.LookPath(os.Args[0])
+	s, _ := exec.LookPath(os.Args[0])
 	log.Println("cwd:", s)
 	http.Handle("/socket.io/", server)
 	http.Handle("/", http.FileServer(http.Dir("../pages/")))
