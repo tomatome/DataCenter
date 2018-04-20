@@ -4,6 +4,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 
 	"github.com/nkovacs/go-socket.io"
@@ -87,6 +88,7 @@ func main() {
 	server := server()
 	http.Handle("/socket.io/", server)
 	http.Handle("/", http.FileServer(http.Dir("../pages")))
-	log.Println("Serving at localhost:12345...")
-	log.Fatal(http.ListenAndServe(":12345", nil))
+	port := os.Getenv("PORT")
+	log.Println("Serving at localhost:", port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
